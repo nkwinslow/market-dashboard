@@ -1,0 +1,25 @@
+<hr class="">
+<div class="container vertical-center" style="width:75%">
+  <div class="panel" style="padding:15px">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="Userbtn-success">(user account)</button></h1>
+          <!-- Navs -->
+          <ul class="nav nav-pills nav-justified">
+            <li ng-click="toggleViews('appSettings')" class="active"><a data-toggle="tab">Settings</a></li>
+            <li ng-click="toggleViews('payment')"><a data-toggle="tab">Billing</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active" ng-show="showObj.showSettings" ui-view="appSettings" ng-click="toggleViews('appSettings')"></div>
+            <hr style="border-color:#FFFFFF;">
+            <div id="home" class="tab-pane fade in active" ng-show="showObj.showPayment" ui-view="payment" ng-click="toggleViews('payment')"></div>
+          </div>
+
+            <!-- <button type="button" class="btn btn-info">Payment Methods</button> -->
+          <br>
+      </div>
+    </div>
+    <br>
+
+  </div>
+</div>

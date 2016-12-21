@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="hoist">
+<head>
+	<title>Hoist</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css">
+	<link id="active_style" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/bootstrap-material-design-master/dist/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap/bootstrap-material-design-masterdist/css/ripples.min.css">
+	<link rel="stylesheet" href="/assets/styles/style.css"/>
+</head>
+<body>
+
+	<header class="navbar">
+	<nav class="navbar navbar-custom navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Left side nav bar -->
+			<div class="navbar-header">
+				<a ui-sref="homepage"><img class="navbar-brand" src="../assets/images/Hoist-logo-final-01-white.png" alt="Icon" style="width:175px;height:70px;padding-left:20px;"></a>
+			</div>
+			<!-- Right Side Nav Bar -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right fluid">
+					<!-- Single button -->
+					<div id="account" class="btn-group" style="padding-top:5px">
+						<button type="button" class="btn btn-raised btn-success dropdown-toggle dropdown-menu-left" data-target="#dropdown" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false" target="_blank">
+							<span class="glyphicon glyphicon-user"></span>
+							Account <span class="caret"></span>
+						</button>
+						<ul id="theme" class="dropdown-menu">
+							<li ui-sref="account"><a>Settings</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in" style="padding-right:10px;"></span>Log Out</a></li>
+						</ul>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</header>
+
+	<ui-view></ui-view>
+
+	<!-- Dependencies -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/assets/js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://js.braintreegateway.com/v1/braintree.js"></script>
+
+	<!-- Javascript -->
+	<script src="/app.js"></script>
+	<script type="text/javascript" src="/js/animations.js"></script>
+
+
+  	<!-- Controllers -->
+  	<script src="/controllers/homeCtrl.js"></script>
+	<script src="/controllers/accountCtrl.js"></script>
+
+
+  	<!-- Services -->
+  	<script src="/service/dataService.js"></script>
+
+
+</body>
+</html>

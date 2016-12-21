@@ -1,0 +1,31 @@
+
+<hr>
+<div class="container fluid" style="width: 75%;">
+	<div class="panel panel-default" style="padding:20px;">
+		<!-- tabs -->
+		<ul class="nav nav-pills nav-justified">
+			<li ng-click="toggleViews('subscriptions')" class="active"><a data-toggle="tab">Subscriptions</a></li>
+			<li ng-click="toggleViews('marketplace')"><a data-toggle="tab">Marketplace</a></li>
+			<li ng-click="toggleViews('comingSoon')"><a data-toggle="tab">Coming Soon</a></li>
+		</ul>
+		<div class="tab-content">
+			<hr style="border-color:#F9F9F9;">
+			<div id="home" class="tab-pane fade in active" ng-show="showObj.showSubs" ui-view="subscriptions" ng-click="toggleViews('subscriptions')">
+			</div>
+			<div id="home" class="tab-pane fade in active" ng-show="showObj.showMarket" ui-view="marketplace" ng-click="toggleViews('marketplace')">
+			</div>
+			<hr style="border-color:#FFFFFF;">
+			<div id="home" class="row tab-pane fade in active" ng-show="showObj.showComing" ui-view="comingSoon" ng-click="toggleViews('comingSoon')">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+			<div class="col-xs-12">
+					<footer class="footer text-center navbar-fixed-bottom navbar-custom">
+							<p class="text-muted credit" style="padding-top:5px;">Copyright © TECHeGO 2016</p>
+							<p class="text-muted credit"><span class="glyphicon glyphicon-question-sign" style="padding-right:10px"></span>Help: support@techego.com</p>
+					</footer>
+			</div>
+	</div>

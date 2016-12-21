@@ -1,0 +1,10 @@
+<div ng-repeat="apps in subscriptions" class="row"> <!-- ng repeat -->
+	<div class="col-md-4 col-md-4 fluid app-spacing" >
+		<div class="thumbnail" style="border: 2px solid #F9F9F9;">
+			<a href="{{apps.url}}"><img class="img-rounded" src="{{apps.path}}" alt="icon" style="height:100px;width:200px;"></a>
+		</div>
+		<div class="caption text-center text-muted">
+			<h4 style="padding-top:-10px;">{{apps.appName}}</h4>
+		</div>
+	</div><!-- end card -->
+</div>
